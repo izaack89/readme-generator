@@ -18,8 +18,8 @@ To Run the system you need to use the follow command
 node index.js
 ```
 
-![ReadMe Generator](./readmeFiles/readmeGenerator.gif)
 After this it will show all the questions that need to be answered
+![ReadMe Generator](./readmeFiles/readmeGenerator.gif)
 
 ## [README Generator GitHub Code](https://github.com/izaack89/readme-generator)
 
@@ -30,6 +30,10 @@ After this it will show all the questions that need to be answered
 - [License Info](https://choosealicense.com/appendix/) - License Information
 - [License Badge](https://shields.io/category/license) - License Badge
 - [Code Badge](https://shields.io/category/analysis) - Languages Top Badge
+
+## Questions
+
+If you have any questions about the repository, open an issue or contact me directly at mitsuominagi@gmail.com. You can find more of my work at [izaack89](https://github.com/izaack89)
 
 ## Author
 
