@@ -1,5 +1,7 @@
 # README Generator
 
+This system will help you to create a proffesional README file by answering some questions and the README will be exported into the exported folder
+
 ## [README Generator GitHub Code](https://github.com/izaack89/code-base)
 
 ## README Generator References
