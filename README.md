@@ -9,18 +9,11 @@ This system will help you to create a proffesional README file by answering some
 - [Inquirer](https://www.digitalocean.com/community/tutorials/nodejs-interactive-command-line-prompts) - Inquirer Information
 - [replace](https://flaviocopes.com/how-to-replace-whitespace-javascript/#:~:text=The%20%5Cs%20meta%20character%20in,occurrence%20of%20the%20white%20space) - Replace all white spaces
 - [License Info](https://choosealicense.com/appendix/) - License Information
-- [License Badge](https://shields.io/) - License Badge
+- [License Badge](https://shields.io/category/license) - License Badge
+- [Code Badge](https://shields.io/category/analysis) - Languages Top Badge
 
 ## Author
 
 - **German Ramirez** - [GitHub](https://github.com/izaack89/)
 
-This system can quickly create a professional README for a new project
-
-<!--  -->
-
-<!-- -->
-
-<!--  -->
-
-<!--  -->
+![Badge for GitHub](https://img.shields.io/github/languages/top/izaack89/readme-generator?style=plastic&logo=github)
