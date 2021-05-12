@@ -123,7 +123,7 @@ const generateMarkdown = function (data) {
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)`;
-  if (data.projectLicense !== "None") {
+  if (data.projectLicense === "None") {
     tableContent = `
 - [Installation](#installation)
 - [Usage](#usage)
