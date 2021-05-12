@@ -2,7 +2,25 @@
 
 This system will help you to create a proffesional README file by answering some questions and the README will be exported into the exported folder
 
-## [README Generator GitHub Code](https://github.com/izaack89/code-base)
+## Installation
+
+Use the package manager [npm](https://docs.npmjs.com/cli/v7/commands/npm-install) to install all the dependencies that are on the package.json
+
+```bash
+npm install
+```
+
+## Usage
+
+To Run the system you need to use the follow command
+
+```bash
+node index.js
+```
+
+After this it will show all the questions that need to be answered
+
+## [README Generator GitHub Code](https://github.com/izaack89/readme-generator)
 
 ## README Generator References
 
