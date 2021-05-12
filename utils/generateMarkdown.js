@@ -165,7 +165,7 @@ ${licenseSection}
 ${data.projectGuidelines}
 
 
-## Test
+## Tests
 
 To run tests, run the following command:
 
