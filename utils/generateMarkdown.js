@@ -98,7 +98,6 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  console.log('renderLicenseSection');
   if (license !== "None") {
     const licenseLink = renderLicenseLink(license);
     const badgeLink = renderLicenseBadge(license);
