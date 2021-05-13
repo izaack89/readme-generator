@@ -58,37 +58,23 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
   // Here I check if the license is none if not I check what License to set the link of the License information
   if (license !== "None") {
-    let link = '';
-    switch (license) {
-      case 'Apache 2.0':
-        link = 'https://choosealicense.com/licenses/apache-2.0/';
-        break;
-      case 'GNU v3.0':
-        link = 'https://choosealicense.com/licenses/gpl-3.0/';
-        break;
-      case 'MIT':
-        link = 'https://choosealicense.com/licenses/mit/';
-        break;
-      case 'BSD 2':
-        link = 'https://choosealicense.com/licenses/bsd-2-clause/';
-        break;
-      case 'BSD 3':
-        link = 'https://choosealicense.com/licenses/bsd-3-clause/';
-        break;
-      case 'Boost SW 1.0':
-        link = 'https://choosealicense.com/licenses/bsl-1.0/';
-        break;
-      case 'Creative Commons Zero 1.0':
-        link = 'https://choosealicense.com/licenses/cc0-1.0/';
-        break;
-      case 'Eclipse':
-        link = 'https://choosealicense.com/licenses/epl-2.0/';
-        break;
-      case 'Mozilla':
-        link = 'https://choosealicense.com/licenses/mpl-2.0/';
-        break;
-    }
-    return `[${license}](${link})`
+    // Created a variable that will be the table content , this will check if the user selected a License so it can be aaded or if not it will not add the License section 
+  let licenseLink = `
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)`;
+  if (license === "None") {
+    licenseLink = `
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)`;
+  }
+    return licenseLink;
   } else {
     // if the License is NONE I return blank
     return '';
@@ -99,14 +85,12 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license !== "None") {
-    const licenseLink = renderLicenseLink(license);
-    const badgeLink = renderLicenseBadge(license);
     const licenseSection = `
 ## License
 
-This project is licensed under the ${licenseLink} license. 
+This project is licensed under the ${license} license. 
 
-${badgeLink}`;
+`;
     return licenseSection;
   }
 }
@@ -115,26 +99,13 @@ ${badgeLink}`;
 const generateMarkdown = function (data) {
   // I get the License Section 
   const licenseSection = renderLicenseSection(data.projectLicense);
-  // Created a variable that will be the table content , this will check if the user selected a License so it can be aaded or if not it will not add the License section 
-  let tableContent = `
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#questions)`;
-  if (data.projectLicense === "None") {
-    tableContent = `
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#questions)`;
-  }
+  const badgeLink = renderLicenseBadge(data.projectLicense);
+  const tableContent = renderLicenseLink(data.projectLicense);
+
   // I created the constant variable for the template of the readme and I append the information that the user provided using inquirer
   const templateReadme = `
 # ${data.projectTitle}
-
+${badgeLink}
 ## Description
 
 ${data.projectDescription}
